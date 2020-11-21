@@ -14,7 +14,7 @@ public class Room {
     private String startHour;
     private String endHour;
 
-    public Room(long id, String name, String date, String startHour, String endHour) {
+    public Room(Long id, String name, String date, String startHour, String endHour) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -23,12 +23,20 @@ public class Room {
     }
     public Room() {}
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Column(name="date",nullable = false)
